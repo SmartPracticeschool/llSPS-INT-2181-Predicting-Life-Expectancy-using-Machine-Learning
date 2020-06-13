@@ -1,0 +1,313 @@
+[
+    {
+        "id": "83cd5469.c0cbe8",
+        "type": "tab",
+        "label": "auto-ai",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "f69112a.188a6f",
+        "type": "ui_form",
+        "z": "83cd5469.c0cbe8",
+        "name": "",
+        "label": "Enter the data:",
+        "group": "1cb2f18d.8e264e",
+        "order": 2,
+        "width": 9,
+        "height": 23,
+        "options": [
+            {
+                "label": "Country",
+                "value": "a",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Year",
+                "value": "b",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Status",
+                "value": "c",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Adult Mortality",
+                "value": "d",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Infant deaths",
+                "value": "e",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Alcohol",
+                "value": "f",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Percentage expenditure",
+                "value": "g",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "HepatitisB",
+                "value": "h",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Measles ",
+                "value": "i",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": " BMI ",
+                "value": "j",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Under five deaths",
+                "value": "k",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Polio",
+                "value": "l",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Total expenditure",
+                "value": "m",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Diphtheria",
+                "value": "n",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "HIV/AIDS",
+                "value": "o",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "GDP",
+                "value": "p",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Population",
+                "value": "q",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "thinness 1-19 years",
+                "value": "r",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "thinness 5-9 years",
+                "value": "s",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Income",
+                "value": "t",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Schooling",
+                "value": "u",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": "",
+            "e": "",
+            "f": "",
+            "g": "",
+            "h": "",
+            "i": "",
+            "j": "",
+            "k": "",
+            "l": "",
+            "m": "",
+            "n": "",
+            "o": "",
+            "p": "",
+            "q": "",
+            "r": "",
+            "s": "",
+            "t": "",
+            "u": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "",
+        "x": 150,
+        "y": 460,
+        "wires": [
+            [
+                "8403b220.90163"
+            ]
+        ]
+    },
+    {
+        "id": "8403b220.90163",
+        "type": "function",
+        "z": "83cd5469.c0cbe8",
+        "name": "pretoken",
+        "func": "global.set(\"a\",msg.payload.a);\nglobal.set(\"b\",msg.payload.b);\nglobal.set(\"c\",msg.payload.c);\nglobal.set(\"d\",msg.payload.d);\nglobal.set(\"e\",msg.payload.e);\nglobal.set(\"f\",msg.payload.f);\nglobal.set(\"g\",msg.payload.g);\nglobal.set(\"h\",msg.payload.h);\nglobal.set(\"i\",msg.payload.i);\nglobal.set(\"j\",msg.payload.j);\nglobal.set(\"k\",msg.payload.k);\nglobal.set(\"l\",msg.payload.l);\nglobal.set(\"m\",msg.payload.m);\nglobal.set(\"n\",msg.payload.n);\nglobal.set(\"o\",msg.payload.o);\nglobal.set(\"p\",msg.payload.p);\nglobal.set(\"q\",msg.payload.q);\nglobal.set(\"r\",msg.payload.r);\nglobal.set(\"s\",msg.payload.s);\nglobal.set(\"t\",msg.payload.t);\nglobal.set(\"u\",msg.payload.u);\n\nvar apikey=\"meIN7M1xd7J3RgfKyqVGdwzNIXI-U85RdQEg51gDjTId\";\nmsg.headers={\"content-type\":\"application/x-www-form-urlencoded\"};\nmsg.payload={\"grant_type\":\"urn:ibm:params:oauth:grant-type:apikey\",\"apikey\":apikey};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 260,
+        "y": 360,
+        "wires": [
+            [
+                "9595e813.a395f8"
+            ]
+        ]
+    },
+    {
+        "id": "9595e813.a395f8",
+        "type": "http request",
+        "z": "83cd5469.c0cbe8",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": false,
+        "url": "https://iam.cloud.ibm.com/identity/token",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 430,
+        "y": 260,
+        "wires": [
+            [
+                "526928bb.3e1538"
+            ]
+        ]
+    },
+    {
+        "id": "526928bb.3e1538",
+        "type": "function",
+        "z": "83cd5469.c0cbe8",
+        "name": "",
+        "func": "var token=msg.payload.access_token;\nvar instance_id=\"000a2024-2090-4c67-a493-e634fa599251\";\nmsg.headers={'Content-Type':'application/json',\"Authorization\":\"Bearer \"+token,\"ML-Instance-ID\":instance_id};\n\nvar a=global.get(\"a\");\nvar b=global.get(\"b\");\nvar c=global.get(\"c\");\nvar d=global.get(\"d\");\nvar e=global.get(\"e\");\nvar f=global.get(\"f\");\nvar g=global.get(\"g\");\nvar h=global.get(\"h\");\nvar i=global.get(\"i\");\nvar j=global.get(\"j\");\nvar k=global.get(\"k\");\nvar l=global.get(\"l\");\nvar m=global.get(\"m\");\nvar n=global.get(\"n\");\nvar o=global.get(\"o\");\nvar p=global.get(\"p\");\nvar q=global.get(\"q\");\nvar r=global.get(\"r\");\nvar s=global.get(\"s\");\nvar t=global.get(\"t\");\nvar u=global.get(\"u\");\nmsg.payload=\n{\"input_data\":[{\"fields\":[\"Country\",\"Year\",\"Status\",\"Adult_Mortality\",\"infant_deaths\",\"Alcohol\",\"percentage_expenditure\",\"Hepatitis_B\",\"Measles \",\" BMI \",\"under_five_deaths \",\"Polio\",\"Total_expenditure\",\"Diphtheria \",\" HIV/AIDS\",\"GDP\",\"Population\",\" thinness _1-19_years\",\" thinness_5-9_years\",\"Income\",\"Schooling\"],\"values\":[[a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u]]}]};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 570,
+        "y": 200,
+        "wires": [
+            [
+                "f668027d.75052"
+            ]
+        ]
+    },
+    {
+        "id": "f668027d.75052",
+        "type": "http request",
+        "z": "83cd5469.c0cbe8",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": false,
+        "url": "https://eu-gb.ml.cloud.ibm.com/v4/deployments/3ca997a6-c4c3-4f7c-ae55-86b3e715329a/predictions",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 690,
+        "y": 260,
+        "wires": [
+            [
+                "227b1f69.9f902"
+            ]
+        ]
+    },
+    {
+        "id": "227b1f69.9f902",
+        "type": "ui_text",
+        "z": "83cd5469.c0cbe8",
+        "group": "1cb2f18d.8e264e",
+        "order": 1,
+        "width": 9,
+        "height": 3,
+        "name": "",
+        "label": "Life expectancy ",
+        "format": "{{msg.payload.predictions[0].values[0][0]}}",
+        "layout": "col-center",
+        "x": 980,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "1cb2f18d.8e264e",
+        "type": "ui_group",
+        "z": "",
+        "name": "",
+        "tab": "75cbe837.ed4848",
+        "order": 1,
+        "disp": true,
+        "width": 9,
+        "collapse": false
+    },
+    {
+        "id": "75cbe837.ed4848",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Life expectancy AutoAI",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
